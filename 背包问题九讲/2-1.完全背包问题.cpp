@@ -13,7 +13,7 @@ int main()
 		cin >> v[i] >> w[i];
 	for (int i = 1; i <= n; i++) {
 		for (int j = m; j >=v[i]; j--) {
-				for (int k = 0; k * v[i] <= j; k++)//�ᳬʱ
+				for (int k = 0; k * v[i] <= j; k++)//选k个
 					f[j] = max(f[j], f[j - k * v[i]] + k * w[i]);
 		}
 	}
